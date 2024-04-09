@@ -48,6 +48,13 @@ Around `02:00` things get very interesting as we dive into a material. It is its
 
 > Also, in the uc-performance call it was mentioned that Unreal materials and (maybe?) shader survive round-tripping via USD, which may be interesting to the point cloud implementation.
 
+Happened to come across <https://github.com/ibbles/LearningUnrealEngine> which fits my brain.
 
+Also found <https://github.com/MOZGIII/ue5-gitignore> which may come in handy when  
+
+### Learned so far
+
+- A laptop screen is really too small. You can see the scene, the outliner and the details at the same time, but with very little space on the latter two.
+- If you open a view on a blueprint (for example) the Viewport disappears. My ADHD immedeately makes me forget what I was doing in the first place:-)
 
  
