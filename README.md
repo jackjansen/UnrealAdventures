@@ -1,3 +1,3 @@
 # UnrealAdventures
 
-My notes and such on learning Unreal.
+My notes and such on learning Unreal: <Diary.md>
