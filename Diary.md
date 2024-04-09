@@ -21,12 +21,13 @@ Just start following the course videos, you will be told what to download when, 
 - The Outliner is similar to the Unity Hierarchy View.
 - The Details is similar to the Unity Inspector
 - The Content Drawer is similar to the Project view, but it also allows import/export and many more things.
+- Here's a terminology list from the documentation: <https://dev.epicgames.com/documentation/en-us/unreal-engine/unreal-engine-terminology>
 
 Lesson 2 shows how to install and start Unreal Editor
 Lesson 3 teaches about the views, navigation and modifying _Actors_ (Unity `GameObjects`)
 Lesson 4 shows how to move stuff from project to project, and add stuff from the store.
 
-I'm not quite sure about the difference between `Level`, `Map` and `World`....
+I'm not quite sure about the difference between `Level`, `Map` and `World`.... **Update:** I am now (after reading the terminology doc). A world is a container of levels, and level and map are synonyms.
 
 ## 08-Apr-2024
 
@@ -50,11 +51,18 @@ Around `02:00` things get very interesting as we dive into a material. It is its
 
 Happened to come across <https://github.com/ibbles/LearningUnrealEngine> which fits my brain.
 
-Also found <https://github.com/MOZGIII/ue5-gitignore> which may come in handy when  
+Also found <https://github.com/MOZGIII/ue5-gitignore> which may come in handy when moving Unreal projects to git. But maybe this isn't the best: it seems to be really geared towards a repo with a single Unreal project. And it ignores everything it doesn't know about (such as this Diary, or the toplevel readme). For now I'll start with a `.gitattributes` based on the info there and my Unity one. 
+
+Here's the links at the end of the course, for continued learning:
+
+<https://dev.epicgames.com/community/unreal-engine/learning?types=course>
+
+<https://dev.epicgames.com/documentation/en-us/unreal-engine/understanding-the-basics-of-unreal-engine>
 
 ### Learned so far
 
 - A laptop screen is really too small. You can see the scene, the outliner and the details at the same time, but with very little space on the latter two.
 - If you open a view on a blueprint (for example) the Viewport disappears. My ADHD immedeately makes me forget what I was doing in the first place:-)
+- Packaging (called building in Unity) takes an inordinate amount of time (almost half an hour on `beelzebub`). But the next time packaging to the same output location is pretty quick (1-2 minutes).
 
  
