@@ -2,6 +2,8 @@
 
 This is a dairy of what I did to learn Unreal. Mainly for my own future reference, but may be more generally useful.
 
+The primary goal is not to become a full-blown Unreal developer, but to find out what I need to know to port `cwipc` to Unreal. First and foremost the reception/decode/render part of the pipeline, which is going to be needed for the Transmixr performance use case, but I will also keep an eye on the capture/encode/transmission part of the pipeline.
+
 ## 07-Apr-2024
 
 Registered an epic account. Pick a memorable password, you'll have to type it in many times and Keychain or so won't help you.
@@ -44,7 +46,7 @@ Around `02:00` things get very interesting as we dive into a material. It is its
 
 > This may be part of how we do point cloud rendering...
 
-
+> Also, in the uc-performance call it was mentioned that Unreal materials and (maybe?) shader survive round-tripping via USD, which may be interesting to the point cloud implementation.
 
 
 
