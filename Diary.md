@@ -104,3 +104,23 @@ UE4 looks quite different from UE5. Found the point cloud actor, which seems to 
 
 - I don't know how to navigate by object. For example, I presume there's a BP somewhere that changes `BP_DemoDisplay8.PC_Demo.Appearance.PointSize` if the value of the slider is changed. I had expected to be able to select the object, and then do _Find References in Scene_ or something like that. Can't find it.
 - Inspected the slider also (it's blueprints). I don't understand how it works together. There must be a blueprint somwhere that I can't find.
+
+## 30-Apr-2024
+
+Decided I should first learn about creating C++ plugins in general before looking at the PointCloudPlugin I found yesterday. Got started with _Unreal Engine C++ Tutorial: Plugins_, from <https://www.youtube.com/watch?v=mgFrFdzb7hg>.
+
+Needed to install Visucla Studio 2017, omg...
+
+Got the plugin to work, any components inside it will always face the player (by auto-rotating).
+
+Also copied the plugin over to yesterdays Pointcloud tutorial code, and used it to have one of the pointclouds always face you.
+
+Next step is trying to see if I can add my own methods and attributes, and if I can see these from BP.
+
+### Learned so far
+
+- The Visual Studio solution contains **all** the source code, so also for the Lidar Point Cloud plugin I installed yesterday.
+- The tutorial goes _very_ fast. For example, the fact that I had to add my new class to the _plugin_ and not to the _project_ I overlooked the first time around.
+- Got an error `Pointer to Incomplete class is not allowed`. Seems to be common. Solution is here: <https://forums.unrealengine.com/t/pointer-to-incomplete-class-type-is-not-allowed/399262/2>.
+Generally, I think the issue is that you have to know which include file to use where the class is actually fully declared. `GameFramework` is a good place to start looking.
+- The end of the tutorial explains how to copy plugins from one UE project to another. Very helpful!
