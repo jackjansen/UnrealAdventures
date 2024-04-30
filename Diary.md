@@ -65,27 +65,42 @@ Here's the links at the end of the course, for continued learning:
 - If you open a view on a blueprint (for example) the Viewport disappears. My ADHD immedeately makes me forget what I was doing in the first place:-)
 - Packaging (called building in Unity) takes an inordinate amount of time (almost half an hour on `beelzebub`). But the next time packaging to the same output location is pretty quick (1-2 minutes).
 
- ## 19-Apr-2024
+## 19-Apr-2024
  
- I'm bad at diaries, adding this entry after the fact.
+I'm bad at diaries, adding this entry after the fact.
  
- Started on _Blueprint Communication_ lesson, <https://dev.epicgames.com/community/learning/courses/LWv/unreal-engine-blueprint-communication/ypKl/unreal-engine-blueprint-communication-overview>.
+Started on _Blueprint Communication_ lesson, <https://dev.epicgames.com/community/learning/courses/LWv/unreal-engine-blueprint-communication/ypKl/unreal-engine-blueprint-communication-overview>.
  
- Quick deep-dive into Blueprint scripting. And how best to structure your scripts, with examples. 
+Quick deep-dive into Blueprint scripting. And how best to structure your scripts, with examples. 
  
- ### Learned so far
+### Learned so far
  
- - BP has all the inheritance and stuff from normal programming languages. It looks a bit like control flow plus data flow ombined (but maybe its only control flow?).
- - The interface is very busy, and sometimes it isn't obvious how to create something, for example a call to a base class method.
- - Some stuff is in the `Class` tab, and it isn't always obvious what is where.
- - Aside from calls there are also events, event handlers and event dispatchers. This was very unclear to me for a long time, until I realized that every BP "pipeline" (unsure what the correct term is) is really just a C++ method in disguise. That also explains why you have to create the events and event dispatchers and all that.
+- BP has all the inheritance and stuff from normal programming languages. It looks a bit like control flow plus data flow ombined (but maybe its only control flow?).
+- The interface is very busy, and sometimes it isn't obvious how to create something, for example a call to a base class method.
+- Some stuff is in the `Class` tab, and it isn't always obvious what is where.
+- Aside from calls there are also events, event handlers and event dispatchers. This was very unclear to me for a long time, until I realized that every BP "pipeline" (unsure what the correct term is) is really just a C++ method in disguise. That also explains why you have to create the events and event dispatchers and all that.
 
- ## 21-Apr-2024
+## 21-Apr-2024
  
- Continued with BP communication. Thenwanted to know a bit about debugging and found the course _Blueprint Debugging_, <https://dev.epicgames.com/community/learning/courses/VdA/unreal-engine-blueprint-debugging/xnmJ/unreal-engine-blueprint-debugging-overview>.
+Continued with BP communication. Thenwanted to know a bit about debugging and found the course _Blueprint Debugging_, <https://dev.epicgames.com/community/learning/courses/VdA/unreal-engine-blueprint-debugging/xnmJ/unreal-engine-blueprint-debugging-overview>.
  
- ## Learned so far
+## Learned so far
  
- The debugger is nifty, at least if you can run your BP in isolation (unsure if it works otherwise). But you're debugging the _class_, and you have to select the _instance_ in the top-right menu before you see all the control flow visualization.
+The debugger is nifty, at least if you can run your BP in isolation (unsure if it works otherwise). But you're debugging the _class_, and you have to select the _instance_ in the top-right menu before you see all the control flow visualization.
  
- When your mouse is captured by the preview player you can get it back with `shift-F1`.
+When your mouse is captured by the preview player you can get it back with `shift-F1`.
+ 
+## 28-Apr-2024
+
+Decided to start looking at point cloud support. Found the Lidar Point Cloud plugin (from Unreal themselves) and <https://github.com/ValentinKraft/UE4_GPUPointCloudRenderer>.
+
+Both are UE4 only. The ValentinKraft one has comments that someone tried a port to UE5 and failed. But it does look more promising from the description that it seems to be able to handle dynamic point clouds.
+
+But let's start with the Lidar one. Installed UE4, the Lidar plugin and the example.
+
+UE4 looks quite different from UE5. Found the point cloud actor, which seems to be the thing rendering. Tried to find out how it is controlled, for example how the sliders that change point size in demo `3.1` work.
+
+## Learned so far
+
+- I don't know how to navigate by object. For example, I presume there's a BP somewhere that changes `BP_DemoDisplay8.PC_Demo.Appearance.PointSize` if the value of the slider is changed. I had expected to be able to select the object, and then do _Find References in Scene_ or something like that. Can't find it.
+- Inspected the slider also (it's blueprints). I don't understand how it works together. There must be a blueprint somwhere that I can't find.
