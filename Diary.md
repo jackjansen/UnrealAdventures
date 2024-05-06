@@ -124,3 +124,21 @@ Next step is trying to see if I can add my own methods and attributes, and if I 
 - Got an error `Pointer to Incomplete class is not allowed`. Seems to be common. Solution is here: <https://forums.unrealengine.com/t/pointer-to-incomplete-class-type-is-not-allowed/399262/2>.
 Generally, I think the issue is that you have to know which include file to use where the class is actually fully declared. `GameFramework` is a good place to start looking.
 - The end of the tutorial explains how to copy plugins from one UE project to another. Very helpful!
+
+## 06-May-2024
+
+Actually, let's not start with adding my own methods and attributes, let's start by looking at <https://github.com/ValentinKraft/UE4_GPUPointCloudRenderer>.
+
+There's also a web page with a link to the master thesis and more at <http://www.valentinkraft.de/portfolio/point-cloud-renderer-for-unreal/>
+
+But first, let's try and upgrade the _PluginTutorial_ from last week to Unreal 4.26 (from 4.24 which it originally was). That worked, so I think minor version upgrade are probably okay.
+
+Managed to create an empty project and add the `GPUPointCloudRenderer` plugin to it (drag-and-drop in the explorer to the `Plugins` folder, then _Edit->Plugins_, then enable it.
+
+I can then add an actor to the scene, and add one or both of the 2 plugin components to that actor. But nothing happens.
+
+After regenerating the VS solution (in the Windows Explorer, context menu) the plugin shows up in VS. And if I set a breakpoint in the constructor it is hit.
+
+Sent an email to the author asking whether sample code is available.
+
+
