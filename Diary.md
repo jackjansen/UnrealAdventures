@@ -141,4 +141,22 @@ After regenerating the VS solution (in the Windows Explorer, context menu) the p
 
 Sent an email to the author asking whether sample code is available.
 
+## 11-Jul-2024
+
+Not much happened, too busy with other things. Karthik joined the adventures. We experimented with "Niagara Point Cloud Renderer for Azure Kinect" which is a 5.3 plugin for rendering
+point clouds from a Azure Kinect. Got it to work, but it turns out it stores not "real" point cloud but RGB and D images. Started experimenting in the cwipc_unreal repository.
+
+Karthik found Niagara, which may be part of the puzzle. It is a programmable particle system. The documentation is very sparse, but there is a thing called a _Niagara Data Interface_ that looks promising, it is for injecting new particles.
+
+A few resources were very handy in understanding this:
+
+- Built-in Niagara Data Interface example, which changes the color of particles based on mouse position
+- The Houdinie Niagara Data Interface, from <https://github.com/sideeffects/HoudiniNiagara>
+- <https://medium.com/xrlo-extended-reality-lowdown/how-we-wrote-a-gpu-based-gaussian-splats-viewer-in-unreal-with-niagara-7457f6f0f640> is a blog post by people doing a similar thing like us, but for gaussian splats.
+
+At some point we realized that `UHoudiniDataInterface` is **not** the wrapper around the point cloud, it is an interface only, so the wrapper needs to be in another class. That's about where we are now.
+
+Current repo is <https://github.com/cwi-dis/cwipc_unreal_test>
+
+
 
