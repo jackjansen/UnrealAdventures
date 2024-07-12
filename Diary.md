@@ -168,4 +168,4 @@ Project refused to open after this, with an error that suggested that it was a p
 
 New editor plugin c++ classes don't show up.
 
-
+**Strong expletive deleted**. After three hourse of reinstalling and god knows what I thought I'd add the factory subclass to the Houdini editor plugin, and then manually move it to the cwipcEditor folder in the Windows Explorer. Guess what: the "New C++ Class.." ignores where you are in the content browser, and in the dialog there is an option for where to put the new class. And my cwipcEditor is one of the choices. And now the folder shows up and all that. 
