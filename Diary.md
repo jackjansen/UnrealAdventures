@@ -158,5 +158,14 @@ At some point we realized that `UHoudiniDataInterface` is **not** the wrapper ar
 
 Current repo is <https://github.com/cwi-dis/cwipc_unreal_test>
 
+## 12-Jul-2024
+
+Found out that we need a Factory class (from <https://github.com/ibbles/LearningUnrealEngine/blob/master/Creating%20new%20asset%20types.md>)
+
+Found out that we need an editor module for that. Created an editor module in our project with instructions from <https://unrealcommunity.wiki/creating-an-editor-module-x64nt5g3>
+
+Project refused to open after this, with an error that suggested that it was a permission problem. Turns out it wasn't: I had made a typo in the project file (missing comma).
+
+New editor plugin c++ classes don't show up.
 
 
