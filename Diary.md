@@ -169,3 +169,12 @@ Project refused to open after this, with an error that suggested that it was a p
 New editor plugin c++ classes don't show up.
 
 **Strong expletive deleted**. After three hourse of reinstalling and god knows what I thought I'd add the factory subclass to the Houdini editor plugin, and then manually move it to the cwipcEditor folder in the Windows Explorer. Guess what: the "New C++ Class.." ignores where you are in the content browser, and in the dialog there is an option for where to put the new class. And my cwipcEditor is one of the choices. And now the folder shows up and all that. 
+
+## 14-Jul-2024
+
+Adding the factory still wasn't good enough: I had expected the _New_ button menu to list my class but it didn't. Tried many many different things, following many documents on the net.
+Eventually it turn out I should have followed <https://dev.epicgames.com/community/learning/tutorials/vyKB/unreal-engine-creating-a-custom-asset-type-with-its-own-editor-in-c> which basically lists all the steps needed.
+
+Very short summary: you also need to create an Actions class, and you need to register this Actions class in your Module initializer routine.
+
+My `CwipcPointCloudSource` now shows up in the Misc category of the new menu.
