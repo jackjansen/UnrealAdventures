@@ -181,6 +181,6 @@ My `CwipcPointCloudSource` now shows up in the Misc category of the new menu.
 
 ## 05-Aug-2024
 
-Many things have happened and unfortunately I haven't documented them clearly. But I'm slowly getting a feeling for how Niagara works. Here is a pretty good description: https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-niagara-effects-for-unreal-engine
+Many things have happened and unfortunately I haven't documented them clearly. But I'm slowly getting a feeling for how Niagara works. Here is a pretty good description: https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-niagara-effects-for-unreal-engine and https://dev.epicgames.com/documentation/en-us/unreal-engine/niagara-system-and-emitter-module-reference
 
 Reading that carefully helped me understanding which functionality should be in the C++ pointcloud source, the C++ pointcloud DataInterface, the Niagara Modules (for initialization, spawning and update), and the Niagara system and Niagara emitter within that system.
