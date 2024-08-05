@@ -178,3 +178,9 @@ Eventually it turn out I should have followed <https://dev.epicgames.com/communi
 Very short summary: you also need to create an Actions class, and you need to register this Actions class in your Module initializer routine.
 
 My `CwipcPointCloudSource` now shows up in the Misc category of the new menu.
+
+## 05-Aug-2024
+
+Many things have happened and unfortunately I haven't documented them clearly. But I'm slowly getting a feeling for how Niagara works. Here is a pretty good description: https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-niagara-effects-for-unreal-engine
+
+Reading that carefully helped me understanding which functionality should be in the C++ pointcloud source, the C++ pointcloud DataInterface, the Niagara Modules (for initialization, spawning and update), and the Niagara system and Niagara emitter within that system.
