@@ -179,6 +179,14 @@ Very short summary: you also need to create an Actions class, and you need to re
 
 My `CwipcPointCloudSource` now shows up in the Misc category of the new menu.
 
+## Sometime in July
+
+The Niagara debugger is very helpful in cases like this. When you open you get a window where you can select "niagara overview" (or a similar name). This will put an overlay on the map window where you see what all your niagara systems are doing. Also, when you open one in the editor it'll also show up, with (edit mode) after its name.
+
+Moreover, when you have the editor open you can select all sorts of variables, parameters, etc (bottom left pane) and in the right-click menu select _Watch in Niagara Debugger_. Very handly.
+
+I found that if you also want to see the log messages (for example from your C++ code) its best to also run under the Visual Studio debugger and use its Output Log window to see the messages, because the Unreal Editor window is becomming pretty crowded by now...
+
 ## 05-Aug-2024
 
 Many things have happened and unfortunately I haven't documented them clearly. But I'm slowly getting a feeling for how Niagara works. Here is a pretty good description: https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-niagara-effects-for-unreal-engine and https://dev.epicgames.com/documentation/en-us/unreal-engine/niagara-system-and-emitter-module-reference
