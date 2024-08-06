@@ -184,3 +184,10 @@ My `CwipcPointCloudSource` now shows up in the Misc category of the new menu.
 Many things have happened and unfortunately I haven't documented them clearly. But I'm slowly getting a feeling for how Niagara works. Here is a pretty good description: https://dev.epicgames.com/documentation/en-us/unreal-engine/overview-of-niagara-effects-for-unreal-engine and https://dev.epicgames.com/documentation/en-us/unreal-engine/niagara-system-and-emitter-module-reference
 
 Reading that carefully helped me understanding which functionality should be in the C++ pointcloud source, the C++ pointcloud DataInterface, the Niagara Modules (for initialization, spawning and update), and the Niagara system and Niagara emitter within that system.
+
+## 06-Aug-2024
+
+Realized yesterday late that the Niagara script language might run on the GPU (for some modules) and that it has aspects of a data flow language as well as an imperative language. The data flow aspect is **important**: anything that has only side effects but does not return a value (or returns a value that is not used downstream) may not execute at all!
+
+So, our `InitializePointCloudSource` module never called our C++ `CwipcNiagaraDataInterface::InitializeSource()` _until we made it return a value_. And _assigned that value to an output variable_. And, in the Niagara System, _assigned that output variable to a system or emitter variable_.
+
