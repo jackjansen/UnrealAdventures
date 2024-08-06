@@ -199,3 +199,4 @@ Realized yesterday late that the Niagara script language might run on the GPU (f
 
 So, our `InitializePointCloudSource` module never called our C++ `CwipcNiagaraDataInterface::InitializeSource()` _until we made it return a value_. And _assigned that value to an output variable_. And, in the Niagara System, _assigned that output variable to a system or emitter variable_.
 
+Next up: running the source `get()` loop in a thread. Here is a good introduction to threading/mutexes and all that in Unreal: https://forums.unrealengine.com/t/multithreading-and-performance-in-unreal/1216417
